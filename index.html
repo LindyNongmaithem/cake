@@ -1,0 +1,224 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Happy 8th Anniversary</title>
+  <style>
+    body {
+      margin: 0;
+      background: radial-gradient(circle at center, #ffeef2, #ffcce0);
+      height: 100vh;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      font-family: 'Segoe UI', sans-serif;
+      overflow: hidden;
+    }
+
+    .scene {
+      position: relative;
+      text-align: center;
+    }
+
+    /* Stylish Font for Names */
+    .names {
+      font-family: 'Dancing Script', cursive;
+      font-size: 3em;
+      font-weight: bold;
+      color: #6f1e51;
+      margin-bottom: 40px;
+      position: relative;
+      top: -50px; /* Move it higher */
+    }
+
+    /* Cake base */
+    .cake {
+      position: relative;
+      width: 200px;
+      margin: auto;
+    }
+
+    .tier {
+      position: relative;
+      background: linear-gradient(to top, #fff, #fcd);
+      border-radius: 12px;
+      margin: 0 auto;
+      box-shadow: inset 0 -4px 0 #ff99bb;
+      border: 3px solid #fff0f5;
+    }
+
+    .tier.bottom {
+      width: 200px;
+      height: 60px;
+      z-index: 1;
+    }
+
+    .tier.middle {
+      width: 140px;
+      height: 50px;
+      margin-top: -10px;
+      z-index: 2;
+    }
+
+    .tier.top {
+      width: 80px;
+      height: 40px;
+      margin-top: -10px;
+      z-index: 3;
+    }
+
+    .icing {
+      position: absolute;
+      width: 100%;
+      height: 15px;
+      background: #fff0f5;
+      border-radius: 50% 50% 0 0;
+      top: 0;
+      box-shadow: inset 0 -3px 3px rgba(255, 182, 193, 0.5);
+    }
+
+    .drips::before,
+    .drips::after {
+      content: '';
+      position: absolute;
+      bottom: 0;
+      background: #fff0f5;
+      border-radius: 50%;
+    }
+
+    .drips::before {
+      width: 15px;
+      height: 25px;
+      left: 20%;
+    }
+
+    .drips::after {
+      width: 12px;
+      height: 20px;
+      right: 25%;
+    }
+
+    /* Candles */
+    .candles {
+      position: absolute;
+      top: -30px;
+      left: 50%;
+      transform: translateX(-50%);
+      display: flex;
+      gap: 10px;
+      z-index: 4;
+    }
+
+    .candle {
+      width: 6px;
+      height: 30px;
+      background: #ff8fa3;
+      border-radius: 2px;
+      position: relative;
+    }
+
+    .flame {
+      position: absolute;
+      top: -10px;
+      left: 50%;
+      transform: translateX(-50%);
+      width: 10px;
+      height: 10px;
+      background: gold;
+      border-radius: 50%;
+      box-shadow: 0 0 10px orange;
+      animation: flicker 0.4s infinite alternate;
+    }
+
+    @keyframes flicker {
+      0% { transform: translateX(-50%) scale(1); opacity: 1; }
+      100% { transform: translateX(-50%) scale(1.2); opacity: 0.8; }
+    }
+
+    /* Text */
+    .message {
+      margin-top: 20px;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #d6336c;
+    }
+
+    .date {
+      font-family: 'Dancing Script', cursive;
+      font-size: 1.5em;
+      font-weight: bold;
+      color: #ff0066;
+      margin-top: 5px;
+    }
+
+    /* Floating hearts */
+    .heart {
+      position: absolute;
+      font-size: 24px;
+      color: #ff6b81;
+      animation: float 6s infinite ease-in-out;
+      opacity: 0.8;
+    }
+
+    .heart:nth-child(1) { left: 10%; bottom: 10%; animation-delay: 0s; }
+    .heart:nth-child(2) { left: 20%; bottom: 5%; animation-delay: 1s; }
+    .heart:nth-child(3) { right: 15%; bottom: 8%; animation-delay: 2s; }
+    .heart:nth-child(4) { right: 25%; bottom: 3%; animation-delay: 3s; }
+    .heart:nth-child(5) { left: 35%; bottom: 15%; animation-delay: 0.5s; }
+    .heart:nth-child(6) { left: 45%; bottom: 12%; animation-delay: 1.5s; }
+    .heart:nth-child(7) { right: 5%; bottom: 18%; animation-delay: 2.5s; }
+    .heart:nth-child(8) { left: 55%; bottom: 25%; animation-delay: 3.5s; }
+
+    @keyframes float {
+      0% { transform: translateY(0) scale(1); opacity: 0.8; }
+      50% { transform: translateY(-150px) scale(1.2); opacity: 0.4; }
+      100% { transform: translateY(0) scale(1); opacity: 0.8; }
+    }
+  </style>
+  <!-- Cursive Font -->
+  <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&display=swap" rel="stylesheet">
+</head>
+<body>
+
+  <div class="scene">
+    <!-- Names Above Cake -->
+    <div class="names">Lindy & Swami</div>
+
+    <!-- Floating Hearts -->
+    <div class="heart">💖</div>
+    <div class="heart">💗</div>
+    <div class="heart">💘</div>
+    <div class="heart">💕</div>
+    <div class="heart">💝</div>
+    <div class="heart">💞</div>
+    <div class="heart">❤️</div>
+    <div class="heart">💓</div>
+
+    <!-- Cake -->
+    <div class="cake">
+      <!-- Candles -->
+      <div class="candles">
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+        <div class="candle"><div class="flame"></div></div>
+      </div>
+
+      <!-- Tiers -->
+      <div class="tier top">
+        <div class="icing drips"></div>
+      </div>
+      <div class="tier middle">
+        <div class="icing drips"></div>
+      </div>
+      <div class="tier bottom">
+        <div class="icing drips"></div>
+      </div>
+    </div>
+
+    <!-- Message -->
+    <div class="message">Happy 8th Anniversary!</div>
+    <div class="date">21st April 2025</div>
+  </div>
+
+</body>
+</html>
